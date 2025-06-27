@@ -2,12 +2,13 @@ local manager = "paru"
 
 os.execute("clear")
 print([[
-Visual -Qdtq Manager by MrZ
+Useless Package Manager by MrZ
 
 Will execute:
 paru -Qdtq
 paru -Qi <package>
 paru -R <package>
+paru -D --asexplicit <package>
 
 Press enter to continue with paru, or type [name] if you want to use another package manager
 ]])
@@ -43,10 +44,18 @@ while true do
     os.execute(manager .. " -Qi " .. list[choose])
 
     -- Remove package after confirmation
-    print("[" .. manager .. "]\nType \"Y\" to uninstall: (else to return)")
-    local confirm = io.read()
-    if confirm == "Y" then
+    print("[" .. manager .. "]")
+    print([[R: uninstall]])
+    print([[D: mark as not useless]])
+    print("else: return")
+    local action = io.read()
+    if action == "R" then
         os.execute(manager .. " -R " .. list[choose])
+        print("\nPress Enter to continue...")
+        io.read()
+        needRefresh = true
+    elseif action == "D" then
+        os.execute(manager .. " -D --asexplicit " .. list[choose])
         print("\nPress Enter to continue...")
         io.read()
         needRefresh = true

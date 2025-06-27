@@ -1,6 +1,6 @@
 # Useless Package Manager
 
-A simple Lua script allowing you to view & uninstall useless packages easily (in terminal)
+A simple Lua script allowing you to interactively view & uninstall useless packages easily in terminal
 
 Environment:
 
