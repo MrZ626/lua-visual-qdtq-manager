@@ -1,12 +1,14 @@
-# (Lua) Useless Package Manager
+# Useless Package Manager
 
-A simple Lua script allowing you to view & uninstall useless packages easily.
+A simple Lua script allowing you to view & uninstall useless packages easily (in terminal)
 
-Environment: Linux, with useless packages which you don't know where they come from and what they do.
+Environment:
 
-## Usage
+- Linux
+- Lua
+- Useless packages which you don't know where they come from and what they do.
 
-`lua upm.lua` in terminal
+Usage: `lua upm.lua`
 
 ## Features
 
