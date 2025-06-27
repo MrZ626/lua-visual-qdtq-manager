@@ -18,7 +18,7 @@ while true do
     -- Print qdtq package names
     os.execute("clear")
     for i = 1, #list do print(i .. ": " .. list[i]) end
-    print("Choose a package to view details, anything else to quit.")
+    print("\nChoose a package to view details: (else to quit)")
     local choose = tonumber(io.read())
     if not list[choose] then os.exit() end
 
@@ -29,9 +29,9 @@ while true do
     f:close()
 
     -- Remove package after confirmation
-    print("Type \"R\" to uninstall, anything else to continue...")
+    print("Type \"Y\" to uninstall: (else to return)")
     local confirm = io.read()
-    if confirm == "R" then
+    if confirm == "Y" then
         os.execute("paru -R " .. list[choose])
         print("\nPackage " .. list[choose] .. " removed! Press Enter to continue...")
         io.read()
