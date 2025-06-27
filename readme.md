@@ -1,7 +1,18 @@
-# Lua Visual -Qdtq manager
+# (Lua) Useless Package Manager
 
-A simple Lua script allowing you to view & uninstall useless packages.
+A simple Lua script allowing you to view & uninstall useless packages easily.
 
-Usage: `lua qdtq.lua`
+Environment: Linux, with useless packages which you don't know where they come from and what they do.
 
-Then follow the instructions shown in the terminal.
+## Usage
+
+`lua upm.lua` in terminal
+
+## Features
+
+- Specify package manager if you want to use another
+- Automatically list all useless packages
+- Type a number to view the package details, then
+  - Type `Y` to uninstall the package
+  - Type `D` to mark it as not useless
+  - Do nothing and back to package list
